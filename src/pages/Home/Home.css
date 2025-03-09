@@ -1,5 +1,27 @@
-/* src/pages/Home/Home.css */
 .home {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 30rem;
+  }
+
+  .hero-block {
+    height: 20rem;
+    width: 100%;
+    background-color:#4e4f4f;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /*temp*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-heading {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    /* You can add more styling as needed */
+    font-weight: 600;
+    letter-spacing: 1px;
   }

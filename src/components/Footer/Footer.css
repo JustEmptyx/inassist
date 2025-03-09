@@ -1,0 +1,130 @@
+
+.footer {
+    background-color:#4e4f4f;
+    color: white;
+    padding: 3rem 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items:flex-start;
+    max-width: 20%;
+  }
+  
+  .footer-logo {
+    height: 6rem;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  .footer-logo-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0rem; 
+    justify-content: center; 
+    width: 100%; 
+    padding: 0rem;
+  }
+  
+  .footer-address p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    color: #cccccc;
+    align-items: flex-start;
+    width:90%;
+  }
+  
+  .footer-contact a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .footer-contact a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #ff3333;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon.linkedin {
+    background-color: #0077b5;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .footer-copyright {
+    text-align: right;
+  }
+  
+  .footer-copyright p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    color: #cccccc;
+  }
+  
+  .footer-copyright a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 0.5rem;
+  }
+  
+  .footer-copyright a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .footer-right {
+      align-items: flex-start;
+    }
+    
+    .footer-copyright {
+      text-align: left;
+    }
+  }
