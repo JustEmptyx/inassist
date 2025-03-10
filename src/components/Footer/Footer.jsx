@@ -30,7 +30,18 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        
+
+        <div className="footer-center">
+          <div className="footer-nav">
+            <div className="footer-nav-column">
+              <Link to="/Services">Services</Link>
+              <Link to="/About">About</Link>
+              <Link to="/Contacts">Contacts</Link>
+              <Link to="/Partners">Partners</Link>
+            </div>
+          </div>
+        </div>
+
         <div className="footer-right">
           <div className="footer-copyright">
             <p>Все права защищены.</p>
