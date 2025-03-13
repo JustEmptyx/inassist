@@ -6,28 +6,28 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="nav-links">
-        <li className="nav-item">
+        <li className="nav-item white">
           <NavLink 
             to="/about" 
             className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
           >
-            ABOUT
+            О НАС
           </NavLink>
         </li>
-        <li className="nav-item">
+        <li className="nav-item white">
           <NavLink 
             to="/services" 
             className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
           >
-            SERVICES
+            УСЛУГИ
           </NavLink>
         </li>
-        <li className="nav-item">
+        <li className="nav-item white">
           <NavLink 
             to="/partners" 
             className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
           >
-            PARTNERS
+            ПАРТНЕРЫ
           </NavLink>
         </li>
       </ul>

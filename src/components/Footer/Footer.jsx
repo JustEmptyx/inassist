@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/FullLogo/inAssist_Full_Logo_WHITE.png';
 import './Footer.css';
+import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
   return (
@@ -30,8 +31,18 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="footer-right">
+          <div className="footer-nav-grid">
+            <div className="footer-nav-row">
+              <HashLink smooth to="#services">Services</HashLink>
+              <HashLink smooth to="#about">About</HashLink>
+            </div>
+            <div className="footer-nav-row">
+              <HashLink smooth to="#Contacts">Contacts</HashLink>
+              <HashLink smooth to="#Partners">Partners</HashLink>
+            </div>
+          </div>
           <div className="footer-copyright">
             <p>Все права защищены.</p>
             <Link to="/privacy-policy">Политика конфиденциальности и обработки данных</Link>

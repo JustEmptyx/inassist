@@ -5,8 +5,17 @@ import './Partners.css';
 const Partners = () => {
   return (
     <div className="Partners">
-        <h2>PT</h2>
-      <p>PARTNERS</p>
+        <div className="hero-block">
+          <div className="hero-content">
+            <div className="hero-heading">
+              <h2>Страница с партнерами</h2>
+              <p className="hero-description">
+                Наша компания предоставляет услуги по дизайну, разработке, 
+                продвижению и сопровождению сайтов
+              </p>
+            </div>
+          </div>
+        </div>
     </div>
   );
 };

@@ -1,48 +1,69 @@
 .navbar {
-    flex: 4;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 3rem;
-  }
-  
-  .nav-item {
-    position: relative;
-  }
-  
-  .nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    padding: 0.5rem 0;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-link:hover,
-  .nav-link.active {
-    color: #72cac3;
-  }
-  
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #72cac3;
-    left: 0;
-    bottom: -4px;
-    transition: width 0.3s ease;
-  }
-  
-  .nav-link:hover::after,
-  .nav-link.active::after {
-    width: 100%;
-  }
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item.turquoise {
+  background-color: #72cac3;
+  font-family: 'Lato Light', sans-serif;
+}
+
+.nav-item.white {
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 1.5rem 0;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item.turquoise .nav-link {
+  color: white;
+}
+
+.nav-item.white .nav-link {
+  color: #333;
+}
+
+.nav-item.turquoise .nav-link:hover,
+.nav-item.turquoise .nav-link.active {
+  color: #333;
+}
+
+.nav-item.white .nav-link:hover,
+.nav-item.white .nav-link.active {
+  color: #72cac3;
+}
+
+/* Remove the underline effect since we're using block backgrounds */
+.nav-link::after {
+  display: none;
+}
