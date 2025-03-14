@@ -11,22 +11,19 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if we've scrolled past the header
       if (window.scrollY > 0) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
       
-      // Determine which section is currently visible
-      const sections = ['home', 'about', 'services', 'portfolio', 'blog'];
+      const sections = ['home', 'about', 'services', 'partners', 'contacts'];
       
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
           
-          // If the section is in view, set it as active
           if (rect.top <= 100 && rect.bottom >= 100) {
             setActiveSection(section);
             break;
@@ -55,13 +52,13 @@ const Header = () => {
         </div>
         <nav className={`nav ${isMobileMenuOpen ? 'active' : ''}`}>
           <ul>
-            <li><HashLink smooth to="#about" className={activeSection === 'about' ? 'active' : ''}>О нас</HashLink></li>
             <li><HashLink smooth to="#services" className={activeSection === 'services' ? 'active' : ''}>Услуги</HashLink></li>
+            <li><HashLink smooth to="#about" className={activeSection === 'about' ? 'active' : ''}>О нас</HashLink></li>
             <li><HashLink smooth to="#partners" className={activeSection === 'partners' ? 'active' : ''}>Партнеры</HashLink></li>
           </ul>
         </nav>
         <div className="contact-button">
-          <a href="mailto:info@inassist.ru" className="btn-contact">Связаться с нами</a>
+          <HashLink smooth to="#contacts" className="btn-contact">Связаться с нами</HashLink>
         </div>
         <div className="mobile-menu-button" onClick={toggleMobileMenu}>
           <span className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}></span>

@@ -85,7 +85,7 @@
 }
 
 .btn-contact:hover {
-  background-color: #004ff8; /* Slightly darker shade of primary color */
+  background-color: var(--color-dark-navy);
 }
 
 .mobile-menu-button {

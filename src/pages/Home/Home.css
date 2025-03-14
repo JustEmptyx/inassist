@@ -1,11 +1,14 @@
 .home {
+    position: relative;
     text-align: center;
+    overflow: hidden;
+    width: 100%;
   }
 
   .hero-block {
-    height: 100vh;
+    min-height: 80rem;
     width: 100%;
-    background-color: var(--color-navy); /* Dark background as shown in the screenshot */
+    background-color: var(--color-navy);
     position: relative;
     display: flex;
     justify-content: center;
@@ -54,7 +57,7 @@
   }
   
   .btn-primary {
-    background-color: #ff6b35; /* Orange color from the screenshot */
+    background-color: #ff6b35;
     color: white;
     border: none;
   }
@@ -70,7 +73,6 @@
     font-size: 1.1rem;
   }
   
-  /* Media queries for responsiveness */
   @media (max-width: 768px) {
     .hero-heading {
       font-size: 2.5rem;

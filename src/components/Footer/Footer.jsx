@@ -15,9 +15,8 @@ const Footer = () => {
             </Link>
           </div>
           <div className="footer-address">
-            <p>Belarus,Minsk, street address,
-               Belarus, Minsk, street address,
-               Belarus, Minsk, street address</p>
+            <p>Беларусь, г. Минск,</p>
+            <p>ул. Короля 2</p>
           </div>
           <div className="footer-contact">
             <a href="mailto:contact@inassist.by">contact@inassist.by</a>
