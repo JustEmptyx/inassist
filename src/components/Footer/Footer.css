@@ -1,5 +1,5 @@
 .footer {
-  background-color: #72cac3;
+  background-color: var(--color-navy);
   color: white;
   padding: 3rem 0;
   width: 100%;
