@@ -1,0 +1,93 @@
+/* src/components/BackgroundElements/BackgroundElements.css */
+.background-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* ensures clicks pass through to content underneath */
+    z-index: -1;
+  }
+  
+  .geo-element {
+    position: absolute;
+    width: 40px;
+    height: 100px;
+    transform-origin: center;
+    transition: all 0.5s ease;
+  }
+  
+  /* Base shape - isometric rectangle */
+  .geo-element::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: skewX(-20deg);
+  }
+  
+  /* Left side elements have gradient from left to right */
+  .geo-element.left::before {
+    background: linear-gradient(to right, var(--current-color), var(--current-color-light));
+  }
+  
+  /* Right side elements have gradient from right to left */
+  .geo-element.right::before {
+    background: linear-gradient(to left, var(--current-color), var(--current-color-light));
+  }
+  
+  /* Color variations using CSS variables */
+  .geo-element.color-0::before {
+    --current-color: var(--color-navy);
+    --current-color-light: var(--color-navy75);
+  }
+  
+  .geo-element.color-1::before {
+    --current-color: var(--color-dark-navy);
+    --current-color-light: var(--color-navy);
+  }
+  
+  .geo-element.color-2::before {
+    --current-color: var(--color-navy75);
+    --current-color-light: var(--color-navy50);
+  }
+  
+  .geo-element.color-3::before {
+    --current-color: var(--color-navy50);
+    --current-color-light: var(--color-navy25);
+  }
+  
+  .geo-element.color-4::before {
+    --current-color: var(--color-navy25);
+    --current-color-light: white;
+  }
+  
+  /* Subtle animation */
+  @keyframes float {
+    0% { transform: translateY(0) scale(1) rotate(0deg); }
+    50% { transform: translateY(10px) scale(1.05) rotate(1deg); }
+    100% { transform: translateY(0) scale(1) rotate(0deg); }
+  }
+  
+  .geo-element {
+    animation: float 20s ease-in-out infinite;
+    animation-delay: calc(var(--delay, 0) * 1s);
+  }
+  
+  /* Add different animation delays */
+  .geo-element:nth-child(odd) {
+    --delay: 2;
+  }
+  
+  .geo-element:nth-child(even) {
+    --delay: 7;
+  }
+  
+  .geo-element:nth-child(3n) {
+    --delay: 5;
+  }
+  
+  .geo-element:nth-child(3n+1) {
+    --delay: 9;
+  }

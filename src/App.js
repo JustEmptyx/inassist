@@ -9,13 +9,17 @@ import Services from './pages/Services/Services';
 import Partners from './pages/Partners/Partners';
 import Contacts from './pages/Contacts/Contacts';
 import Footer from './components/Footer/Footer';
+import BackgroundElements from './components/BackgroundElements/BackgroundElement'; // Import the background component
+
 
 function App() {
   return (
+    
     <Router>
       <div className="App">
         <Header />
         <div className="content">
+          {/* <BackgroundElements/> */}
           <section id="home">
             <Home />
           </section>
