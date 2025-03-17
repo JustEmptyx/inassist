@@ -1,4 +1,4 @@
-// Home.jsx
+
 import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
@@ -8,7 +8,6 @@ import ParallelogramPattern from '../../components/PatternElements/Parallelogram
 
 const Home = () => {
   useEffect(() => {
-    // Устанавливаем CSS переменную для высоты хедера
     const updateHeaderHeight = () => {
       const headerElement = document.querySelector('.header');
       if (headerElement) {

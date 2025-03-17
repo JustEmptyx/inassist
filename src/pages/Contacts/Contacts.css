@@ -88,7 +88,6 @@ input::placeholder,
 textarea::placeholder {
   color: transparent;
 }
-/* Делаем звездочки красными в плейсхолдерах */
 input[placeholder*="*"]::placeholder,
 textarea[placeholder*="*"]::placeholder {
   position: relative;
@@ -105,7 +104,6 @@ input[placeholder="КОНТАКТНЫЙ НОМЕР*"]::placeholder::after {
   color: red;
 }
 
-/* Убирание плейсхолдера при фокусе (вместо прозрачности) */
 input:focus::placeholder,
 textarea:focus::placeholder {
   color: transparent;
@@ -181,7 +179,7 @@ textarea {
   margin-left: 5px;
 }
 
-/* Checkbox */
+
 .form-check {
   display: flex;
   align-items: flex-start;
@@ -209,7 +207,7 @@ textarea {
   color: var(--color-dark-navy);
 }
 
-/* Submit button */
+
 .button-container {
   display: flex;
   justify-content: flex-end;
@@ -231,7 +229,6 @@ textarea {
   background-color: var(--color-dark-navy);;
 }
 
-/* Маркировка обязательных полей звездочками */
 input[name="name"]::placeholder,
 input[name="phone"]::placeholder {
   position: relative;
@@ -243,7 +240,7 @@ input[name="phone"]::placeholder::after {
   color: red;
 }
 
-/* Добавляем красные звездочки внутри плейсхолдеров */
+
 input[name="name"],
 input[name="phone"] {
   position: relative;
@@ -255,7 +252,7 @@ input[name="phone"]::placeholder {
 }
 
 
-/* Хак для реализации красных звездочек */
+
 input[name="name"]::placeholder,
 input[name="phone"]::placeholder {
   background: linear-gradient(90deg, #333, #333);
@@ -263,7 +260,6 @@ input[name="phone"]::placeholder {
   color: transparent;
 }
 
-/* Стили для кастомных плейсхолдеров */
 .placeholder-text {
   position: absolute;
   top: 10px;
@@ -283,7 +279,6 @@ input[name="phone"]::placeholder {
   color: red;
 }
 
-/* Скрываем оригинальные плейсхолдеры */
 input::placeholder,
 textarea::placeholder {
   color: transparent;
@@ -298,11 +293,10 @@ textarea:not(:placeholder-shown) ~ .placeholder-text {
 }
 
 .contact-info .icon-wrapper svg {
-  color: var(--color-navy); /* Изменение цвета иконок на navy */
+  color: var(--color-navy); 
 }
 
 
-/* Responsive */
 @media (max-width: 992px) {
   .contacts-container {
     gap: 60px;

@@ -115,7 +115,7 @@
 
 @media (max-width: 992px) {
   .hero-logo {
-    max-width: 40vh; /* Адаптивное уменьшение для средних экранов */
+    max-width: 40vh;
   }
 
   .hero-rectangle {
@@ -177,5 +177,5 @@
 }
 
 .hero-pattern {
-  z-index: 10; /* Убедитесь, что паттерн выше фона, но ниже контента */
+  z-index: 10;
 }

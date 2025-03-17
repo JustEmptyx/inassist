@@ -12,8 +12,7 @@
   right: 0;
   width: 60%;
   height: 60%;
-  /* Уменьшаем горизонтальное пространство между столбцами */
-  column-gap: -20px; /* Отрицательный column-gap для перекрытия */
+  column-gap: -20px; 
 }
 
 .parallelogram-pattern.bottom-left {
@@ -21,8 +20,7 @@
   left: 0;
   width: 60%;
   height: 60%;
-  /* Уменьшаем горизонтальное пространство между столбцами */
-  column-gap: -20px; /* Отрицательный column-gap для перекрытия */
+  column-gap: -20px; 
 }
 
 .pattern-cell {
@@ -31,10 +29,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Увеличиваем отрицательные боковые отступы для сближения столбцов */
   margin-left: -25px;
   margin-right: -25px;
-  /* Вертикальные отступы оставляем прежними */
   margin-top: -10px;
   margin-bottom: -5px;
 }
@@ -58,7 +54,6 @@
   height: 60px;
 }
 
-/* Стили для flipped параллелограммов */
 .parallelogram.flipped {
   transform: skewY(23deg);
 }

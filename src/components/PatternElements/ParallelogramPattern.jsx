@@ -1,4 +1,4 @@
-// inassist/src/components/PatternElements/ParallelogramPattern.jsx
+
 import React from 'react';
 import './ParallelogramPattern.css';
 
@@ -14,14 +14,11 @@ const ParallelogramPattern = ({ position }) => {
         const isEvenCol = col % 2 === 0;
         const isVisible = (isEvenRow && isEvenCol) || (!isEvenRow && !isEvenCol);
         
-        // Изменяем логику определения позиции для верхнего правого угла
         let isInRightPosition;
         if (position === 'top-right') {
-          // Создаем более плавное распределение к центру
           const distToCorner = Math.sqrt(Math.pow(row, 2) + Math.pow(gridSize - col - 1, 2));
           isInRightPosition = distToCorner < gridSize * 0.85 || row < 3 || col > gridSize - 4;
         } else {
-          // Оставляем логику для нижнего левого угла как была
           isInRightPosition = col <= row + 2;
         }
         
@@ -36,7 +33,7 @@ const ParallelogramPattern = ({ position }) => {
           const maxDistance = Math.sqrt(2 * Math.pow(gridSize, 2));
           const colorIntensity = distanceFactor / maxDistance;
           
-          // Добавляем случайный флаг для определения поворота
+
           const isFlipped = Math.random() > 0.5;
 
           elements.push(
