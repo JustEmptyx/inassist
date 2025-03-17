@@ -14,26 +14,30 @@ const ParallelogramPattern = ({ position }) => {
         const isEvenCol = col % 2 === 0;
         const isVisible = (isEvenRow && isEvenCol) || (!isEvenRow && !isEvenCol);
         
-        const isInRightPosition = position === 'top-right' 
-          ? (row < 3 || col > gridSize - 4) 
-          : col <= row + 2;
+        // Изменяем логику определения позиции для верхнего правого угла
+        let isInRightPosition;
+        if (position === 'top-right') {
+          // Создаем более плавное распределение к центру
+          const distToCorner = Math.sqrt(Math.pow(row, 2) + Math.pow(gridSize - col - 1, 2));
+          isInRightPosition = distToCorner < gridSize * 0.85 || row < 3 || col > gridSize - 4;
+        } else {
+          // Оставляем логику для нижнего левого угла как была
+          isInRightPosition = col <= row + 2;
+        }
         
         if (isVisible && isInRightPosition) {
-
           let distanceFactor;
           if (position === 'top-right') {
-
             distanceFactor = Math.sqrt(Math.pow(row, 2) + Math.pow(gridSize - col - 1, 2));
           } else {
-
             distanceFactor = Math.sqrt(Math.pow(gridSize - row - 1, 2) + Math.pow(col, 2));
           }
           
           const maxDistance = Math.sqrt(2 * Math.pow(gridSize, 2));
-
           const colorIntensity = distanceFactor / maxDistance;
           
-          const isFlipped = row % 2 !== 0;
+          // Добавляем случайный флаг для определения поворота
+          const isFlipped = Math.random() > 0.5;
 
           elements.push(
             <div 
@@ -45,13 +49,12 @@ const ParallelogramPattern = ({ position }) => {
               }}
             >
               <div 
-                className={`parallelogram ${position}`}
+                className={`parallelogram ${position} ${isFlipped ? 'flipped' : ''}`}
                 style={{
-
                   backgroundColor: colorIntensity < 0.55 
                     ? 'var(--color-dark-navy)' 
                     : 'var(--color-navy50)',
-                  opacity: colorIntensity < 0.52 ? 0.7 - colorIntensity : 0.5 - (colorIntensity - 0.5) * 0.7
+                  opacity: colorIntensity < 0.55 ? 0.7 - colorIntensity : 0.5 - (colorIntensity - 0.5) * 0.7
                 }}
               />
             </div>

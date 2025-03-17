@@ -1,59 +1,78 @@
-
 .parallelogram-pattern {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    gap: 0px;
-    z-index: 1;
-  }
-  
-  .parallelogram-pattern.top-right {
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 60%; 
-  }
-  
-  .parallelogram-pattern.bottom-left {
-    bottom: 0;
-    left: 0;
-    width: 60%; 
-    height: 60%;
-  }
-  
-  .pattern-cell {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1px;
-  }
-  
-  .parallelogram {
-    width: 100%;
-    height: 100%;
-    transform: skewY(-23deg);
-  }
-  
-  .parallelogram.top-right {
-    transform-origin: top right;
-    
-    width: 60%;
-    height: 180%;
-    margin-left: auto; 
-  }
-  
-  .parallelogram.bottom-left {
-    transform-origin: bottom left;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 0px;
+  z-index: 1;
+}
 
-    width: 60%;
-    height: 180%;
-  }
+.parallelogram-pattern.top-right {
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  /* Уменьшаем горизонтальное пространство между столбцами */
+  column-gap: -20px; /* Отрицательный column-gap для перекрытия */
+}
 
-  .parallelogram.flipped {
-    width: 100%;
-    height: 100%;
-    transform: skewY(-23deg);
-  }
+.parallelogram-pattern.bottom-left {
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  /* Уменьшаем горизонтальное пространство между столбцами */
+  column-gap: -20px; /* Отрицательный column-gap для перекрытия */
+}
+
+.pattern-cell {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Увеличиваем отрицательные боковые отступы для сближения столбцов */
+  margin-left: -25px;
+  margin-right: -25px;
+  /* Вертикальные отступы оставляем прежними */
+  margin-top: -10px;
+  margin-bottom: -5px;
+}
+
+.parallelogram {
+  width: 100%;
+  height: 100%;
+  transform: skewY(-23deg);
+}
+
+.parallelogram.top-right {
+  transform-origin: top right;
+  width: 20px;
+  height: 60px;
+  margin-left: auto;
+}
+
+.parallelogram.bottom-left {
+  transform-origin: bottom left;
+  width: 20px;
+  height: 60px;
+}
+
+/* Стили для flipped параллелограммов */
+.parallelogram.flipped {
+  transform: skewY(23deg);
+}
+
+.parallelogram.top-right.flipped {
+  transform-origin: top right;
+  transform: skewY(23deg);
+  width: 20px;
+  height: 60px;
+}
+
+.parallelogram.bottom-left.flipped {
+  transform-origin: bottom left;
+  transform: skewY(23deg);
+  width: 20px;
+  height: 60px;
+}
