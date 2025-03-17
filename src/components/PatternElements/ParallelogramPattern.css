@@ -1,0 +1,59 @@
+/* inassist/src/components/PatternElements/ParallelogramPattern.css */
+.parallelogram-pattern {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 0px; /* убираем промежутки между ячейками */
+    z-index: 1;
+  }
+  
+  .parallelogram-pattern.top-right {
+    top: 0;
+    right: 0;
+    width: 60%; /* увеличиваем область узора */
+    height: 60%; /* увеличиваем область узора */
+  }
+  
+  .parallelogram-pattern.bottom-left {
+    bottom: 0;
+    left: 0;
+    width: 60%; /* увеличиваем область узора */
+    height: 60%; /* увеличиваем область узора */
+  }
+  
+  .pattern-cell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px; /* добавляем минимальный отступ внутри ячейки */
+  }
+  
+  .parallelogram {
+    width: 100%;
+    height: 100%;
+    transform: skewY(-23deg); /* сохраняем оригинальный угол */
+  }
+  
+  .parallelogram.top-right {
+    transform-origin: top right;
+    /* Увеличиваем размер параллелограмма */
+    width: 60%;
+    height: 180%;
+    margin-left: auto; /* Выравнивание по правому краю */
+  }
+  
+  .parallelogram.bottom-left {
+    transform-origin: bottom left;
+    /* Увеличиваем размер параллелограмма */
+    width: 60%;
+    height: 180%;
+  }
+
+  .parallelogram.flipped {
+    width: 100%;
+    height: 100%;
+    transform: skewY(-23deg); /* сохраняем оригинальный угол */
+  }
