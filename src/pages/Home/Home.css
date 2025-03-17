@@ -1,90 +1,181 @@
 .home {
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-    width: 100%;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--header-height)); 
+  overflow: hidden;
+  margin-top: var(--header-height);
+}
+
+.hero-block {
+  height: 100%; 
+  width: 100%;
+  background-color: var(--color-navy);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero-rectangle {
+  background-color: white;
+  width: 100%;
+  max-width: 80%;
+  height: 80%; /* Вместо aspect-ratio, чтобы уместить в экран */
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.logo-container {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 5;
+}
+
+.hero-logo {
+  max-width: 50vh;
+  height: auto;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 5vh;
+  right: 0px;
+  max-width: 50%;
+  text-align: left;
+  z-index: 10;
+}
+
+.hero-heading {
+  color: var(--color-graphite);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.hero-heading h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: black;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e55a25;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: black;
+  border: 1px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+  .hero-logo {
+    max-width: 40vh; /* Адаптивное уменьшение для средних экранов */
   }
 
-  .hero-block {
-    min-height: 80rem;
-    width: 100%;
-    background-color: var(--color-navy);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+  .hero-rectangle {
+    aspect-ratio: 4 / 3;
   }
   
   .hero-content {
-    max-width: 1000px;
-    padding: 0 20px;
+    max-width: 80%;
   }
   
-  .hero-heading {
-    color: white;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-    letter-spacing: 1px;
-    text-align: left;
+  .hero-heading h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-block {
+    padding: 1rem;
+    min-height: 60vh;
+  }
+  
+  .hero-rectangle {
+    aspect-ratio: 1 / 1;
+  }
+  
+  .logo-container {
+    top: 15px;
+    left: 15px;
+  }
+  
+  .hero-logo {
+    max-width: 30vh;
+  }
+  
+  .hero-content {
+    bottom: 15px;
+    right: 15px;
+    max-width: 90%;
+  }
+  
+  .hero-heading h2 {
+    font-size: 1.5rem;
   }
   
   .hero-description {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    font-size: 1rem;
   }
   
   .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    flex-direction: column;
+    align-items: flex-end;
   }
   
   .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
   
-  .btn-primary {
-    background-color: #ff6b35;
-    color: white;
-    border: none;
-  }
-  
-  .btn-secondary {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-  }
-  
-  .arrow-icon {
-    margin-left: 8px;
-    font-size: 1.1rem;
-  }
-  
-  @media (max-width: 768px) {
-    .hero-heading {
-      font-size: 2.5rem;
-    }
-    
-    .hero-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .btn {
-      width: 100%;
-      max-width: 240px;
-    }
-  }
+}
+
+.hero-pattern {
+  z-index: 10; /* Убедитесь, что паттерн выше фона, но ниже контента */
+}
