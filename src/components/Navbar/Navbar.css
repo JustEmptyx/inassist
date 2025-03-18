@@ -63,7 +63,6 @@
   color: #72cac3;
 }
 
-/* Remove the underline effect since we're using block backgrounds */
 .nav-link::after {
   display: none;
 }

@@ -8,14 +8,13 @@ import ParallelogramPattern from '../PatternElements/ParallelogramPattern'
 const Footer = () => {
   return (
     <footer className="footer">
-      {/* Верхняя навигация с якорями */}
+
       <div className="footer-top-nav">
         <HashLink smooth to="#services">Услуги</HashLink>
         <HashLink smooth to="#about">О нас</HashLink>
-        <HashLink smooth to="#Partners">Партнеры</HashLink>
+        <HashLink smooth to="#partners">Партнеры</HashLink>
       </div>
-      
-      {/* Параллелограммы слева */}
+
       <div className="footer-pattern-left">
         <ParallelogramPattern 
           position="bottom-left" 
@@ -24,7 +23,6 @@ const Footer = () => {
         />
       </div>
       
-      {/* Основной контент футера */}
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-logo-container">
@@ -65,7 +63,6 @@ const Footer = () => {
         </div>
       </div>
       
-      {/* Параллелограммы справа */}
       <div className="footer-pattern-right">
         <ParallelogramPattern 
           position="top-right" 
