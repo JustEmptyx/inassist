@@ -26,18 +26,15 @@
     height: 100%;
     transform: skewX(-20deg);
   }
-  
-  /* Left side elements have gradient from left to right */
+
   .geo-element.left::before {
     background: linear-gradient(to right, var(--current-color), var(--current-color-light));
   }
   
-  /* Right side elements have gradient from right to left */
   .geo-element.right::before {
     background: linear-gradient(to left, var(--current-color), var(--current-color-light));
   }
   
-  /* Color variations using CSS variables */
   .geo-element.color-0::before {
     --current-color: var(--color-navy);
     --current-color-light: var(--color-navy75);
@@ -63,7 +60,6 @@
     --current-color-light: white;
   }
   
-  /* Subtle animation */
   @keyframes float {
     0% { transform: translateY(0) scale(1) rotate(0deg); }
     50% { transform: translateY(10px) scale(1.05) rotate(1deg); }
@@ -75,7 +71,6 @@
     animation-delay: calc(var(--delay, 0) * 1s);
   }
   
-  /* Add different animation delays */
   .geo-element:nth-child(odd) {
     --delay: 2;
   }

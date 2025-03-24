@@ -1,0 +1,73 @@
+.parallelogram-pattern {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 0px;
+  z-index: 1;
+}
+
+.parallelogram-pattern.top-right {
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  column-gap: -20px; 
+}
+
+.parallelogram-pattern.bottom-left {
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  column-gap: -20px; 
+}
+
+.pattern-cell {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -25px;
+  margin-right: -25px;
+  margin-top: -10px;
+  margin-bottom: -5px;
+}
+
+.parallelogram {
+  width: 100%;
+  height: 100%;
+  transform: skewY(-23deg);
+}
+
+.parallelogram.top-right {
+  transform-origin: top right;
+  width: 20px;
+  height: 60px;
+  margin-left: auto;
+}
+
+.parallelogram.bottom-left {
+  transform-origin: bottom left;
+  width: 20px;
+  height: 60px;
+}
+
+.parallelogram.flipped {
+  transform: skewY(23deg);
+}
+
+.parallelogram.top-right.flipped {
+  transform-origin: top right;
+  transform: skewY(23deg);
+  width: 20px;
+  height: 60px;
+}
+
+.parallelogram.bottom-left.flipped {
+  transform-origin: bottom left;
+  transform: skewY(23deg);
+  width: 20px;
+  height: 60px;
+}
