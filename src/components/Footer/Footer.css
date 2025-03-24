@@ -1,7 +1,7 @@
 .footer {
   background-color: var(--color-navy);
   color: white;
-  padding: 3rem 0;
+  padding-top: 2rem;
   width: 100%;
   font-family: 'Lato', sans-serif;
   position: relative;
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
   position: relative;
   z-index: 5;
 }
@@ -32,7 +32,6 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Стили для параллелограммов */
 .footer-pattern-left,
 .footer-pattern-right {
   position: absolute;
@@ -50,7 +49,6 @@
   right: 0;
 }
 
-/* Основной контейнер футера */
 .footer-container {
   position: relative;
   z-index: 2;
@@ -63,12 +61,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 0rem;
   text-align: center;
 }
 
 .footer-logo-container {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
 }
 
 .footer-logo {
@@ -81,14 +79,14 @@
 .footer-info {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.5rem;
   align-items: center;
 }
 
 .footer-company-name {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
 }
 
 .footer-company-name a {
@@ -117,11 +115,10 @@
   text-decoration: underline;
 }
 
-/* Социальные иконки */
 .footer-social {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .social-icon {
@@ -142,9 +139,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Copyright */
 .footer-copyright {
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 0.9rem;
 }
 
@@ -163,7 +159,6 @@
   text-decoration: underline;
 }
 
-/* Адаптивность */
 @media (max-width: 992px) {
   .footer-container {
     max-width: 90%;

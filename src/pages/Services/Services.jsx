@@ -48,6 +48,12 @@ const Services = () => {
 
   return (
     <section id="services" className="services">
+      <div className="services-header">
+        <h2 className="services-title">Наши услуги</h2>
+        <p className="services-subtitle">
+          Комплексные решения для развития вашего бизнеса
+        </p>
+      </div>
       <div className="services-container">
         {services.map((service, index) => (
           <div 

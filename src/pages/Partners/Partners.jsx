@@ -17,25 +17,36 @@ function Partners() {
         цифровые продукты на базе нашей<br />
         надежной IT-инфраструктуры
       </h2>
-      
       <div className="partners-logo-grid">
         <div className="partner-logo">
-          <img src={logoSamocat} alt="Самокат" />
+          <a href="https://samokat.tech" target="_blank" rel="noopener noreferrer">
+            <img src={logoSamocat} alt="Самокат" />
+          </a>
         </div>
         <div className="partner-logo">
-          <img src={logoX5Group} alt="X5group" />
+          <a href="https://x5.ru" target="_blank" rel="noopener noreferrer">
+            <img src={logoX5Group} alt="X5group" />
+          </a>
         </div>
         <div className="partner-logo">
-          <img src={logoVK} alt="ВКонтакте" />
+          <a href="https://vk.com" target="_blank" rel="noopener noreferrer">
+            <img src={logoVK} alt="ВКонтакте" />
+          </a>
         </div>
         <div className="partner-logo">
-          <img src={logoOstrovok} alt="Островок!" />
+          <a href="https://ostrovok.ru" target="_blank" rel="noopener noreferrer">
+            <img src={logoOstrovok} alt="Островок!" />
+          </a>
         </div>
         <div className="partner-logo">
-          <img src={logoVCRu} alt="vc.ru" />
+          <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">
+            <img src={logoVCRu} alt="vc.ru" />
+          </a>
         </div>
         <div className="partner-logo">
-          <img src={logoAmedi} alt="AMEDI" />
+          <a href="https://amedi.ru" target="_blank" rel="noopener noreferrer">
+            <img src={logoAmedi} alt="AMEDI" />
+          </a>
         </div>
       </div>
     </div>

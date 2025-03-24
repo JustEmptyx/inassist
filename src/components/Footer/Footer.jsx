@@ -26,9 +26,9 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-logo-container">
-            <Link to="/">
+            <HashLink smooth to="#home">
               <img src={logo} alt="InAssist Logo" className="footer-logo" />
-            </Link>
+            </HashLink>
           </div>
           
           <div className="footer-info">
